@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "ses",
+  "info": {
+    "name": "SE"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "discription": {
+      "type": "string"
+    },
+    "Notre_mission": {
+      "type": "richtext"
+    },
+    "extra": {
+      "type": "dynamiczone",
+      "components": [
+        "specialite.paragraph"
+      ]
+    },
+    "file": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
